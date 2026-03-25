@@ -9,12 +9,12 @@
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  line-height: 1.6;
 }
 
-/* ヘッダー画像 */
+/* バナー */
 .top-banner img {
   width: 100%;
-  height: auto;
 }
 
 /* ファーストビュー */
@@ -22,36 +22,48 @@ body {
   background: #000;
   color: #fff;
   text-align: center;
-  padding: 60px 20px;
+  padding: 50px 15px;
+}
+
+.hero h1 {
+  font-size: 22px;
+}
+
+.hero p {
+  font-size: 15px;
 }
 
 /* ボタン */
 .btn {
-  display: inline-block;
+  display: block;
+  width: 90%;
+  max-width: 320px;
+  margin: 20px auto;
   background: #ff6600;
   color: #fff;
-  padding: 18px 28px;
-  margin-top: 20px;
-  text-decoration: none;
+  padding: 20px;
   font-size: 18px;
-  border-radius: 8px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
   font-weight: bold;
-  animation: pulse 2s infinite;
+  animation: pulse 1.8s infinite;
 }
 
 @keyframes pulse {
   0% { transform: scale(1);}
-  50% { transform: scale(1.05);}
+  50% { transform: scale(1.07);}
   100% { transform: scale(1);}
 }
 
 /* セクション */
 .section {
-  padding: 40px 20px;
+  padding: 30px 15px;
   text-align: center;
 }
 
 .section h2 {
+  font-size: 20px;
   color: #ffcc00;
 }
 
@@ -59,28 +71,35 @@ body {
 .features {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .box {
   background: #f5f5f5;
-  padding: 18px;
+  padding: 16px;
   border-radius: 10px;
+  font-size: 15px;
 }
 
-/* 事故画像 */
+/* 画像 */
 .accident-img img {
   width: 100%;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 /* CTA */
 .cta {
   background: #000;
   color: #fff;
-  padding: 50px 20px;
+  padding: 40px 15px;
   text-align: center;
+}
+
+/* 注意書き */
+.note {
+  font-size: 11px;
+  color: #ccc;
 }
 
 /* 追従ボタン */
@@ -104,37 +123,28 @@ body {
 
 <body>
 
-<!-- 上バナー -->
 <div class="top-banner">
-  <img src="banner.jpg" alt="にしむら整骨院">
+  <img src="banner.jpg">
 </div>
 
-<!-- 上 -->
 <section class="hero">
-<h1>熊本市で交通事故治療なら にしむら整骨院</h1>
+<h1>熊本市で交通事故治療なら<br>にしむら整骨院</h1>
 
 <p>むち打ち・腰痛・しびれに対応</p>
 
-<p style="margin-top:15px;">
-交通事故の治療は<br>
-<strong>自賠責保険適用で窓口負担0円となる場合があります</strong>
+<p>
+自賠責保険適用で<br>
+<strong>窓口負担0円となる場合があります</strong>
 </p>
 
-<p style="font-size:11px; color:#ddd;">
-※自賠責保険適用の場合
-</p>
+<p class="note">※自賠責保険適用の場合</p>
 
-<p style="margin-top:20px; font-weight:bold;">
-🚨 事故後は早めの対応が重要です<br>
-今すぐご相談ください
-</p>
-
-<p style="margin-top:20px;">
-予約はこちらから<br>⬇︎⬇︎⬇︎
+<p>
+🚨事故後は早めの対応が重要です
 </p>
 
 <a href="https://lin.ee/TKMd7Z7" class="btn">
-無料で今すぐLINE相談
+無料でLINE相談する
 </a>
 </section>
 
@@ -142,27 +152,18 @@ body {
 <h2>こんなお悩みありませんか？</h2>
 
 <div class="features">
-<div class="box">事故後から首が痛い（むち打ち）</div>
-<div class="box">病院では湿布だけで不安</div>
+<div class="box">事故後から首が痛い</div>
+<div class="box">湿布だけで不安</div>
 <div class="box">保険の手続きが分からない</div>
 </div>
 
 <div class="accident-img">
-<img src="accident.jpg" alt="交通事故">
+<img src="accident.jpg">
 </div>
-
 </section>
 
 <section class="section">
-<h2>その悩み、すぐ相談できます</h2>
-
-<p style="font-weight:bold;">
-LINEで簡単に無料相談OK
-</p>
-
-<p>
-予約はこちらから<br>⬇︎⬇︎⬇︎
-</p>
+<h2>その悩み、今すぐ相談できます</h2>
 
 <a href="https://lin.ee/TKMd7Z7" class="btn">
 無料でLINE相談する
@@ -173,37 +174,27 @@ LINEで簡単に無料相談OK
 <h2>当院が選ばれる理由</h2>
 
 <div class="features">
-<div class="box">✔ 自賠責保険対応で窓口負担0円の場合あり</div>
-<div class="box">✔ 保険会社とのやり取りサポート</div>
-<div class="box">✔ 必要に応じて専門家のご紹介も可能</div>
-<div class="box">✔ 国家資格保有スタッフ対応</div>
+<div class="box">自賠責保険対応</div>
+<div class="box">保険会社対応サポート</div>
+<div class="box">専門家紹介可能</div>
+<div class="box">国家資格保有</div>
 </div>
 
 <div class="accident-img">
-<img src="accident.jpg" alt="交通事故">
+<img src="accident.jpg">
 </div>
-
 </section>
 
 <section class="cta">
 <h2>まずは無料相談</h2>
 
-<p style="font-weight:bold;">
-相談だけでもOKです
-</p>
-
-<p>
-予約はこちらから<br>⬇︎⬇︎⬇︎
-</p>
-
 <a href="https://lin.ee/TKMd7Z7" class="btn">
-無料で今すぐLINE相談
+今すぐLINE相談する
 </a>
 
-<p style="font-size:12px; margin-top:15px; color:#ccc;">
-※症状や状況により適用条件が異なります。詳しくはご相談ください。
+<p class="note">
+※症状や状況により適用条件が異なります
 </p>
-
 </section>
 
 <div class="fixed-btn">
