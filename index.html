@@ -14,32 +14,55 @@ body {
   color: #333;
 }
 
-/* 画像 */
-img {
-  width: 100%;
-  border-radius: 10px;
+/* ヘッダー */
+header {
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  background: #000;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header .insta-header {
+  width: 28px;
+  position: absolute;
+  right: 15px;
+  top: 20px;
 }
 
 /* バナー */
 .top-banner img {
   width: 100%;
+  display: block;
   border-radius: 0;
 }
 
 /* ファーストビュー */
 .hero {
   text-align: center;
-  padding: 50px 15px;
+  padding: 30px 15px;
 }
 
 .hero h1 {
   font-size: 22px;
+  margin-bottom: 10px;
 }
 
 .alert {
   font-size: 16px;
   font-weight: bold;
   color: #d9534f;
+  margin-bottom: 10px;
 }
 
 /* ボタン */
@@ -47,10 +70,10 @@ img {
   display: block;
   width: 90%;
   max-width: 320px;
-  margin: 20px auto;
+  margin: 15px auto;
   background: linear-gradient(45deg, #ff6600, #ff9900);
   color: #fff;
-  padding: 20px;
+  padding: 18px;
   font-size: 18px;
   border-radius: 10px;
   text-align: center;
@@ -68,13 +91,14 @@ img {
 
 /* セクション */
 .section {
-  padding: 30px 15px;
+  padding: 25px 15px;
   text-align: center;
 }
 
 .section h2 {
   font-size: 20px;
   color: #d4af37;
+  margin-bottom: 15px;
 }
 
 /* ボックス */
@@ -82,6 +106,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-bottom: 15px;
 }
 
 .box {
@@ -90,6 +115,14 @@ img {
   border-radius: 10px;
   font-size: 15px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+/* 画像 */
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
 }
 
 /* CTA */
@@ -100,10 +133,15 @@ img {
   text-align: center;
 }
 
+.cta h2 {
+  margin-bottom: 20px;
+}
+
 /* 注意書き */
 .note {
-  font-size: 11px;
-  color: #777;
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 10px;
 }
 
 /* 追従ボタン */
@@ -124,130 +162,98 @@ img {
   color: #fff;
 }
 
-/* LINE */
-.line-btn {
-  background: #06C755;
-}
+.line-btn { background: #06C755; }
+.tel-btn { background: #ff6600; }
 
-/* 電話 */
-.tel-btn {
-  background: #ff6600;
+/* スマホ対応 */
+@media(min-width:768px){
+  .features { flex-direction: row; justify-content: center; }
+  .box { flex: 1; max-width: 250px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- バナー -->
-<div class="top-banner">
-  <header style="justify-content: center; position: relative;">
-  
-  <h1 style="margin:0; font-size:18px;">
-    <a href="https://yuzu2021.github.io/lp-seikotsu-0401page/#faq" 
-       style="color:#fff; text-decoration:none;">
+<header>
+  <h1>
+    <a href="https://yuzu2021.github.io/lp-seikotsu-0401page/#faq">
       🏥にしむら整骨院🏥
     </a>
   </h1>
-
-  <!-- Instagramは右固定にする -->
-  <a href="https://www.instagram.com/gym_seikotuin" 
-     style="position:absolute; right:15px;">
+  <a href="https://www.instagram.com/gym_seikotuin">
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="insta-header">
   </a>
+</header>
+
+<!-- バナー -->
+<div class="top-banner">
   <img src="banner.jpg" alt="交通事故バナー">
 </div>
 
 <!-- ファーストビュー -->
 <section class="hero">
-<h1>熊本市で交通事故施術なら<br>にしむら整骨院</h1>
-
-<p class="alert">事故後そのままにすると症状が長引く場合があります</p>
-
-<p>「むち打ち」・「腰痛」・「しびれ」に対応</p>
-
-<img src="accident.jpg" alt="交通事故イメージ">
-
-<p>
-【自賠責保険適用の場合】<br>
-<strong>💁‍♀️窓口負担がかからないケースがあります</strong>
-</p>
-
-<p class="note">※症状や状況により異なります</p>
-
-<a href="https://lin.ee/TKMd7Z7" class="btn">
-無料相談する
-</a>
+  <h1>熊本市で交通事故施術なら<br>にしむら整骨院</h1>
+  <p class="alert">事故後そのままにすると症状が長引く場合があります</p>
+  <p>「むち打ち」・「腰痛」・「しびれ」に対応</p>
+  <img src="accident.jpg" alt="交通事故イメージ">
+  <p>
+    【自賠責保険適用の場合】<br>
+    <strong>💁‍♀️窓口負担がかからないケースがあります</strong>
+  </p>
+  <p class="note">※症状や状況により異なります</p>
+  <a href="https://lin.ee/TKMd7Z7" class="btn">無料相談する</a>
 </section>
-  
-<!-- 外観の画像 -->
+
+<!-- 外観画像 -->
 <img src="gaikan.jpg" alt="外観">
-  
-<!-- 悩み -->
+
+<!-- お悩み -->
 <section class="section">
-<h2>こんなお悩みありませんか？</h2>
-
-<div class="features">
-<div class="box">🚨事故後から首や腰に違和感がある</div>
-<div class="box">😞湿布や薬だけで不安</div>
-<div class="box">🤦保険の手続きがよく分からない</div>
-</div>
-
-<a href="https://lin.ee/TKMd7Z7" class="btn">
-LINEで相談する
-</a>
+  <h2>こんなお悩みありませんか？</h2>
+  <div class="features">
+    <div class="box">🚨事故後から首や腰に違和感がある</div>
+    <div class="box">😞湿布や薬だけで不安</div>
+    <div class="box">🤦保険の手続きがよく分からない</div>
+  </div>
+  <a href="https://lin.ee/TKMd7Z7" class="btn">LINEで相談する</a>
 </section>
 
 <!-- 特徴 -->
 <section class="section">
-<h2>当院の特徴</h2>
-
-<div class="features">
-<div class="box">🤝交通事故施術のご相談に対応</div>
-<div class="box">☺️保険会社とのやりとりサポート</div>
-<div class="box">👨‍💼専門家のご紹介が可能な場合あり</div>
-<div class="box">👨‍⚕️国家資格者が対応</div>
-</div>
+  <h2>当院の特徴</h2>
+  <div class="features">
+    <div class="box">🤝交通事故施術のご相談に対応</div>
+    <div class="box">☺️保険会社とのやりとりサポート</div>
+    <div class="box">👨‍💼専門家のご紹介が可能な場合あり</div>
+    <div class="box">👨‍⚕️国家資格者が対応</div>
+  </div>
 </section>
 
-<!-- 院長の画像 -->
+<!-- 院長 -->
 <img src="ni4.jpg" alt="院長">
-<!-- 院長自己紹介 -->
 <img src="5.jpg" alt="自己紹介">
-  
-<!-- 声 -->
+
+<!-- 患者様の声 -->
 <section class="section">
-<h2>患者様の声</h2>
-
-<div class="box">
-「首の痛みが軽くなり、日常生活が楽になりました」（30代女性）
-</div>
-
-<div class="box">
-「保険の相談にも乗ってもらえて安心できました」（40代男性）
-</div>
+  <h2>患者様の声</h2>
+  <div class="features">
+    <div class="box">「首の痛みが軽くなり、日常生活が楽になりました」（30代女性）</div>
+    <div class="box">「保険の相談にも乗ってもらえて安心できました」（40代男性）</div>
+  </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-<h2>まずはお気軽にご相談ください</h2>
-
-<a href="https://lin.ee/TKMd7Z7" class="btn">
-今すぐLINEで相談する
-</a>
-
-<p class="note">
-※症状や状況により施術内容は異なります
-</p>
+  <h2>まずはお気軽にご相談ください</h2>
+  <a href="https://lin.ee/TKMd7Z7" class="btn">今すぐLINEで相談する</a>
+  <p class="note">※症状や状況により施術内容は異なります</p>
 </section>
 
 <!-- 追従ボタン -->
 <div class="fixed-btn">
-  <a href="https://lin.ee/TKMd7Z7" class="line-btn">
-    LINE相談
-  </a>
-  <a href="tel:09023559371" class="tel-btn">
-    電話する
-  </a>
+  <a href="https://lin.ee/TKMd7Z7" class="line-btn">LINE相談</a>
+  <a href="tel:09023559371" class="tel-btn">電話する</a>
 </div>
 
 </body>
